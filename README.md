@@ -39,3 +39,25 @@ import React from "react";
 
 export default () => <div>My Site!</div>;
 ```
+
+## Doing more with themes
+
+You can use this as a place to start when developing themes. I
+generally suggest using [yarn
+workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) like the
+[gatsby-theme-examples repo
+does](https://github.com/ChristopherBiscardi/gatsby-theme-examples),
+but using `yarn link` or `npm link` is a viable alternative if you're
+not familiar with workspaces.
+
+```shell
+git clone git@github.com:ChristopherBiscardi/gatsby-theme-minimal.git
+git clone git@github.com:ChristopherBiscardi/gatsby-theme-minimal-example.git
+cd gatsby-theme-minimal
+yarn link
+cd ../gatsby-theme-minimal-example
+yarn
+yarn link gatsby-theme-minimal
+```
+
+Then run `yarn gatsby develop` and start making changes to your theme!
